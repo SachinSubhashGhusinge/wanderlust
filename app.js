@@ -71,9 +71,9 @@ const sessionOption = {
   },
 }
 
-// app.get("/",(req,res)=>{
-//     res.send("Welcome To Home Page");
-// });
+app.get("/",(req,res)=>{
+   res.redirect("/listings");
+});
 
 
 app.use(session(sessionOption));
@@ -198,5 +198,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log("app is listening on port : 8080");
+  console.log(`Listing on port ${PORT}`);
 });
