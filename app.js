@@ -53,6 +53,14 @@ const store = MongoStore.create({
 
 });
 
+
+// const store = MongoStore.create({
+//   mongoUrl: dburl,
+//   crypto: { secret: process.env.SECRET },
+//   touchAfter: 24*3600,
+//   mongoOptions: { tls: true }  // add this if using Atlas
+// });
+
 const PORT = process.env.PORT || 8080;
 
 store.on("error", ()=>{
